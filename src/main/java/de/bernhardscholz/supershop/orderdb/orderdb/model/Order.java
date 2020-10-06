@@ -12,6 +12,6 @@ import java.util.List;
 public class Order {
 
     public String orderId;
-    public List<String> orderedProducts;
+    public List<Product> orderedProducts;
 
 }
