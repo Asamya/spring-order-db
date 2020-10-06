@@ -21,7 +21,12 @@ public class OrderDb {
             if (order.getOrderId().equals(orderId)){
                 return Optional.of(order);
             }
-            return Optional.empty();
         }
+        return Optional.empty();
+    }
+
+    public Order addOrderToList(Order order) {
+        orders.add(order);
+        return order;
     }
 }
