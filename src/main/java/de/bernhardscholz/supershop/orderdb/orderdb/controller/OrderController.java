@@ -1,6 +1,7 @@
 package de.bernhardscholz.supershop.orderdb.orderdb.controller;
 
 import de.bernhardscholz.supershop.orderdb.orderdb.model.Order;
+import de.bernhardscholz.supershop.orderdb.orderdb.model.Product;
 import de.bernhardscholz.supershop.orderdb.orderdb.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,9 +28,8 @@ public class OrderController {
     }
 
     @PutMapping("addOrder")
-    public Order addOrderToList(@RequestBody Order order){
-
-        return orderService.addOrderToList(order);
+    public Order addOrder(@RequestBody List<Product> orderProducts){
+        return orderService.createOrder(orderProducts);
     }
 
     @GetMapping("{orderId}")

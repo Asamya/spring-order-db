@@ -1,6 +1,7 @@
 package de.bernhardscholz.supershop.orderdb.orderdb.Db;
 
 import de.bernhardscholz.supershop.orderdb.orderdb.model.Order;
+import de.bernhardscholz.supershop.orderdb.orderdb.model.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -25,8 +26,7 @@ public class OrderDb {
         return Optional.empty();
     }
 
-    public Order addOrderToList(Order order) {
+    public void createOrder(Order order) {
         orders.add(order);
-        return order;
     }
 }
