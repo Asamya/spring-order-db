@@ -19,7 +19,7 @@ public class OrderDb {
 
     public Optional<Order> getOrderById(String orderId) {
         for (Order order : orders) {
-            if (order.getOrderId().equals(orderId)){
+            if (order.getOrderId().equals(orderId)) {
                 return Optional.of(order);
             }
         }

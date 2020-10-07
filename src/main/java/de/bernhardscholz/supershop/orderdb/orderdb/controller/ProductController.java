@@ -23,7 +23,7 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> listOfProducts(){
+    public List<Product> listOfProducts() {
         return productService.listOfProducts();
     }
 
@@ -31,7 +31,7 @@ public class ProductController {
     public Product getProductById(@PathVariable String id) {
         Optional<Product> product = productService.getProductById(id);
         //List<Product> newProducts = new ArrayList<>();
-        if(product.isPresent()){
+        if (product.isPresent()) {
             //newProducts.add(product.get());
             return product.get();
         }

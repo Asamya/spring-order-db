@@ -11,11 +11,11 @@ import java.util.Optional;
 public class ProductDb {
 
     public final ArrayList<Product> products = new ArrayList<Product>(List.of(
-                        new Product("1","Superman"),
-                        new Product("2","Superwoman"),
-                        new Product("3", "Spiderman"),
-                        new Product("4", "Hulk"),
-                        new Product("5", "She-Hulk")
+            new Product("1", "Superman"),
+            new Product("2", "Superwoman"),
+            new Product("3", "Spiderman"),
+            new Product("4", "Hulk"),
+            new Product("5", "She-Hulk")
     ));
 
 
@@ -24,7 +24,7 @@ public class ProductDb {
     }
 
     public Optional<Product> getProductById(String id) {
-        for (Product product : products){
+        for (Product product : products) {
             if (product.getId().equals(id)) {
                 return Optional.of(product);
             }

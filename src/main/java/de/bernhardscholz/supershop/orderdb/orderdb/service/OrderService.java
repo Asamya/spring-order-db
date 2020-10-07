@@ -29,8 +29,8 @@ public class OrderService {
 
     public Order createOrder(List<Product> orderProducts) {
         for (Product product : orderProducts) {
-            if (product.getId().isEmpty() && product.getProductName().isEmpty()){
-                throw new IllegalArgumentException("product"+product+"not found.");
+            if (product.getId().isEmpty() && product.getProductName().isEmpty()) {
+                throw new IllegalArgumentException("product" + product + "not found.");
             }
         }
         String id = UUID.randomUUID().toString();

@@ -23,17 +23,17 @@ public class OrderController {
     }
 
     @GetMapping
-    public List<Order> listOfOrders(){
+    public List<Order> listOfOrders() {
         return orderService.listOfOrders();
     }
 
     @PutMapping("addOrder")
-    public Order addOrder(@RequestBody List<Product> orderProducts){
+    public Order addOrder(@RequestBody List<Product> orderProducts) {
         return orderService.createOrder(orderProducts);
     }
 
     @GetMapping("{orderId}")
-    public Order getOrderById(@PathVariable String orderId){
+    public Order getOrderById(@PathVariable String orderId) {
         Optional<Order> newOrder = orderService.getOrderById(orderId);
         if (newOrder.isPresent()) {
             return newOrder.get();
